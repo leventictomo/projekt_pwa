@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Layout */
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #000;
+    line-height: 1.6;
+    align-items: center;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:hover{
+    color: #d40000;
+}
+
+header {
+    background: #d40000;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+header .date {
+    text-align: left;
+    font-size: 0.9em;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #222;
+    font-weight: bolder;
+    background-color: #d40000;
+    color: #f2f2f2;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    list-style: none;
+    background: white;
+    padding: 1em 0;
+    border-radius: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+}
+
+.category h2 {
+    color: #d40000;
+    margin-bottom: 1em;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* centrira članke */
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+article {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 1em;
+    width: calc(33.33% - 2em); /* 3 u jednom redu, minus razmak */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+article img {
+    width: 100%;
+    height: auto;
+}
+
+article h3 {
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+/* Article page */
+.article-page {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.article-page h2 {
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 0.5em;
+}
+
+.article-page img {
+    width: 100%;
+    margin: 1em 0;
+}
+
+form {
+    background: white;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-top: 2em;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.potrebna_prijava{
+    background: white;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-top: 8em;
+    margin-bottom: 8em;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3em;
+    margin-top: 1em;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="file"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background: #d40000;
+    color: white;
+    border: none;
+    padding: 0.75em 2em;
+    font-size: 1em;
+    border-radius: 4px;
+    margin-top: 1.5em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background: #a80000;
+}
+
+.obavijest{
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    article {
+        width: calc(50% - 2em); /* 2 članka u redu */
+    }
+    .article-page {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    form {max-width: 80%;}
+}
+
+@media (max-width: 600px) {
+    article {
+        width: 100%; /* 1 članak po redu na mobitelima */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .article-page {
+    max-width:90%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    form {max-width: 90%;}
+}
