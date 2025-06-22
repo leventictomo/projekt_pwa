@@ -14,6 +14,11 @@ Ova web aplikacija omogućuje unos, prikaz i administraciju vijesti za nogometni
 - Login i registracija korisnika
 - Administracija (unos, uređivanje i brisanje vijesti)
 
+- ## Pokretanje
+1. Pokreni XAMPP (Apache + MySQL)
+2. Uvezi baze 'hnkdrinovci.sql' i 'korisnici.sql' u phpMyAdmin
+3. Otvori `index.php` u pregledniku: http://localhost/projekt_pwa
+
 ## NAPOMENA
 - Pristup administriranju vijesti, uređivanju, brisanju... moguće je sa username: tomoleventic i password: 12345678
 
